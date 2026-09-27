@@ -1,0 +1,32 @@
+/*#######################################################
+ *
+ * SPDX-FileCopyrightText: 2026 Gregor Santner <gsantner AT mailbox DOT org>
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * Standalone syntax-highlighting editor extracted from Markor.
+#########################################################*/
+apply plugin: 'com.android.library'
+
+android {
+    namespace 'net.gsantner.highlightingeditor'
+    compileSdkVersion rootProject.ext.version_compileSdk
+
+    defaultConfig {
+        minSdkVersion 18
+    }
+
+    compileOptions {
+        encoding = 'UTF-8'
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lint {
+        abortOnError false
+    }
+}
+
+dependencies {
+    // HighlightingEditor extends AppCompatEditText, so appcompat is part of the public API
+    api 'androidx.appcompat:appcompat:1.4.2'
+}

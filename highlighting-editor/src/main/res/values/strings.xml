@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Used as accessibility content description for selected-line indicators -->
+    <string name="option_select_lines" translatable="false">option_select_lines</string>
+</resources>
